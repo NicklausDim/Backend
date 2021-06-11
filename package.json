@@ -1,0 +1,21 @@
+{
+  "name": "contact-list-be",
+  "version": "1.0.0",
+  "description": "Be app for MERN Stack Contact List Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicklaus Dimitriadis",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.7",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.1"
+  }
+}

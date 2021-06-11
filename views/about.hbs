@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+    .card{
+        border-radius: 5px;
+        width: 210px;
+        margin: 5px;
+        height: 200px;
+        padding: 5px;
+        border: 1px solid gray;
+        background-color: white;
+        display: inline-block;
+    }
+</style>
+
+
+<body>
+
+    {{>header}}
+    <h1>Hi HBS!</h1>
+
+    {{#each testData}}
+            <div class='card'>
+            <img src = "http://localhost:8080/avatars//{{this.avatar}}"/>
+            <div data-id="fullName">
+                {{this.fullName}}
+            </div>
+            <div data-id="email">
+                {{this.email}}
+            </div>
+            <div data-id="phone">
+                {{this.phone}}
+            </div>
+            <div data-id="address">
+                {{this.address}}
+            </div>
+            <button>✏️</button>
+            <button onClick="salute('{{this.fullName}}')">💾</button>
+            <button>🗑️</button>
+        </div>
+    {{/each}}
+
+</body>
+<script>
+    const salute = (name) => {
+        alert('Hey ' + name);
+    }
+</script>
+</html>
